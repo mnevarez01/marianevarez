@@ -1,6 +1,11 @@
-.menu{
-  
-}
+
 .breadcrumb{
-  background-color: #0061a8;
+  background-color: rgba(0,0,0,0.0);
+  color: #b3d9ff;
+}
+
+.font{
+  font-size: large;
+ font-style: italic;
+ font-weight: bold;
 }

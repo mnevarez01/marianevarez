@@ -16,10 +16,10 @@ const Menu = () => {
 
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item text-light">Maria Nevarez</li>
-        <li class="breadcrumb-item active" onClick={linkedIn}>LinkedIn</li>
+        <li class="breadcrumb-item text-light font">Maria Nevarez</li>
+        <li class="breadcrumb-item" onClick={linkedIn}>LinkedIn</li>
         <li class="breadcrumb-item" onClick={gitHub}>GitHub</li>
-        <li class="breadcrumb-item active" aria-current="page">Resume</li>
+        <li class="breadcrumb-item" aria-current="page">Resume</li>
       </ol>
     </nav>
 
