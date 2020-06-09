@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
+import { OverlayTrigger, Tooltip } from 'react-bootstrap';
+import './style.css'
 
 
 const HomePage = () => {
+  const ref = useRef(null);
+
+
   const info = [
     {
       title: 'Denver Through the Decades',
@@ -26,19 +31,27 @@ const HomePage = () => {
     },
   ]
 
+
+
   return (
     <div className='container'>
-      {info.map(({ title, img, description }) =>
-        (
-          <div className="card mb3" >
-            <img src={img} className="card-img-top" alt="..." />
-            <div className="card-body">
-              <h5 class="card-title">{title}</h5>
-              <p className="card-text">{description}</p>
-            </div>
-          </div>
-        ))}
-    </div>
+      <h2 className='text'>Projects</h2>
+      {info.map(({ title, img, description, link }) =>
+        (<>
+          <OverlayTrigger key='left' placement="left" overlay={
+            <Tooltip className="display">
+              <h3>{title}</h3>
+              <p> {description}</p>
+            </Tooltip>
+          }>
+            <img src={img} ref={ref} className="card-img-top card" alt={title} onClick={() => link} rounded />
+          </OverlayTrigger>
+
+        </>
+
+        ))
+      }
+    </div >
   )
 }
 

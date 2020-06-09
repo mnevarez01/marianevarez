@@ -1,0 +1,18 @@
+.card{
+  margin-bottom: 35px;
+  margin-top: 40px;
+  margin-left: 20px;
+  background-color: rgba(0,0,0,0.0);
+  color: white;
+  text-align: center;
+}
+
+.tooltip{
+  background-color: aliceblue;
+}
+
+.text{
+  color: #b3d9ff;
+  text-align: center;
+  margin-top: 20px;
+}
