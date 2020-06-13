@@ -1,10 +1,13 @@
 import React, { useState, useRef } from 'react';
-import { OverlayTrigger, Tooltip } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+// import { OverlayTrigger, Tooltip } from 'react-bootstrap';
+import { MDBMask, MDBView, MDBContainer, MDBRow, MDBCol } from 'mdbreact';
 import './style.css'
 
 
 const HomePage = () => {
   const ref = useRef(null);
+
 
 
   const info = [
@@ -34,20 +37,24 @@ const HomePage = () => {
 
 
   return (
-    <div className='container'>
+    <div className='Background'>
       <h2 className='text'>Projects</h2>
       {info.map(({ title, img, description, link }) =>
-        (<>
-          <OverlayTrigger key='left' placement="left" overlay={
-            <Tooltip className="display">
-              <h3>{title}</h3>
-              <p> {description}</p>
-            </Tooltip>
-          }>
-            <img src={img} ref={ref} className="card-img-top card" alt={title} onClick={() => link} rounded />
-          </OverlayTrigger>
-
-        </>
+        (
+          <MDBContainer className='mt-5'>
+            <MDBRow>
+              <MDBCol md='4'>
+                <MDBView hover>
+                  <img className="img-fluid" alt='' src={img} />
+                  <MDBMask className="flex-center" overlay="blue-strong">
+                    <p className='white-text'>{title}</p>
+                    <p className='white-text'>{description}</p>
+                    <a>{link}</a>
+                  </MDBMask>
+                </MDBView>
+              </MDBCol>
+            </MDBRow>
+          </MDBContainer>
 
         ))
       }
