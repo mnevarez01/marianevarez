@@ -51,7 +51,8 @@ const HomePage = () => {
                     alt=""
                   />
                   <MDBMask className="flex-center" overlay="blue-strong">
-                    <p className="white-text">{title}</p>
+                    <h3 onClick={() => { window.open(link) }} className="white-text title">{title}</h3>,
+                    <hr></hr>,
                     <p className="white-text">{description}</p>
                   </MDBMask>
                 </MDBView>
