@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { Link } from 'react-router-dom';
+
 // import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { MDBMask, MDBView, MDBContainer, MDBRow, MDBCol } from 'mdbreact';
 import './style.css'
@@ -37,7 +37,7 @@ const HomePage = () => {
 
 
   return (
-    <div className='blue-gradient color-block-5 mb-3 mx-auto z-depth-1'>
+    <div className='blue-gradient color-block-5 mb-3 mx-auto z-depth-1-half '>
       <br></br>
       <h2 className='text'>Portfolio</h2>
       {info.map(({ title, img, description, link }) =>
@@ -45,7 +45,7 @@ const HomePage = () => {
           <MDBContainer className="mt-5">
             <MDBRow>
               <MDBCol md='10'>
-                <h3>{title}</h3>
+                <h3 className='titles'>{title}</h3>
                 <MDBView hover>
                   <img
 
@@ -53,7 +53,7 @@ const HomePage = () => {
                     className="img-fluid"
                     alt=""
                   />
-                  <MDBMask onClick={() => { window.open(link) }} className="flex-center" overlay="blue-strong">
+                  <MDBMask onClick={() => { window.open(link) }} className="flex-center" overlay="indigo-strong">
                     <p className="white-text">{description}</p>
                   </MDBMask>
                 </MDBView>

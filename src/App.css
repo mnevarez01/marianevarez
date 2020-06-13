@@ -1,4 +1,4 @@
-/* body{
-  background-image: url('./assets/Background1.jpg');
-  background-attachment: fixed;
-} */
+body{
+  background-image: linear-gradient(#A6E1FA,  #0E6BA8  #0A2472, #001C55, #00072D);
+  height: 100%;
+}
