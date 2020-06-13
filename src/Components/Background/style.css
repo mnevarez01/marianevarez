@@ -1,35 +1,23 @@
-/* .card{
-  margin-bottom: 35px;
-  margin-top: 40px;
-  margin-left: 20px;
-  background-color: rgba(0,0,0,0.0);
-  color: white;
-  text-align: center;
-}
-
-.tooltip{
-  background-color: aliceblue;
-} */
-
-.text{
-  color: #b3d9ff;
-  text-align: center;
-  
-}
-
-.Background .gradient  {
+#apppage .gradient  {
   background-image: url('../../assets/Background1.jpg');
 }
-.Background  {
+#apppage  {
   background-image: url('../../assets/Background1.jpg');
 }
-/* 
-.Background h6 {
+
+#apppage .view {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 100vh;
+}
+
+#apppage h6 {
   line-height: 1.7;
 }
 
 @media only screen and (max-width: 400px) {
-  .Background .animated img {
+  #apppage .animated img {
     max-height: 50vh;
     transform: translateX(-50%);
     left: 50%;
@@ -37,7 +25,7 @@
   }
 }
 @media only screen and (max-width: 767px) {
-  .Background .animated img {
+  #apppage .animated img {
     max-height: 35vh;
     transform: translateX(-50%);
     left: 50%;
@@ -45,7 +33,7 @@
 }
 
 @media (max-width: 767px) and (orientation: landscape) {
-  .Background .animated img {
+  #apppage .animated img {
     max-height: 50vh;
     transform: translateX(-50%);
     left: 50%;
@@ -53,7 +41,7 @@
   }
 }
 @media (max-width: 1000px) and (orientation: landscape) {
-  .Background .view {
+  #apppage .view {
     min-height: 150vh;
   }
-} */
+}
