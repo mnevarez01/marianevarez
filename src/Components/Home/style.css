@@ -1,12 +1,8 @@
+
+
 .text{
   color: #b3d9ff;
   text-align: center;
-  
-}
-
-.Background .gradient  {
-  background-image: url('../../assets/Background1.jpg');
-}
-.Background  {
-  background-image: url('../../assets/Background1.jpg');
+  padding: 30px;
+  margin-top: 50px;
 }

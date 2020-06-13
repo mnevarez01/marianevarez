@@ -45,12 +45,13 @@ class Background extends React.Component {
         onClick={this.handleTogglerClick}
       />
     );
+
     return (
       <div id="apppage">
         <Router>
           <div>
             <MDBNavbar
-              color="primary-color"
+              color="rgba-blue-light"
               dark
               expand="md"
               fixed="top"
