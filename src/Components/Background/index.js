@@ -24,6 +24,12 @@ class Background extends React.Component {
   state = {
     collapsed: false
   };
+  linkedIn = () => {
+    window.open('https://www.linkedin.com/in/mnevarez05/')
+  }
+  gitHub = () => {
+    window.open('https://github.com/mnevarez01')
+  }
 
   handleTogglerClick = () => {
     this.setState({
@@ -96,8 +102,8 @@ class Background extends React.Component {
                       process has set me up to deal with the fast and ever-changing technology field. Excited to use my time
                       management, dedication and eye for detail to ensure that creating an excellent user experience.
                     </h6>
-                    <MDBBtn color="white">LinkedIn</MDBBtn>
-                    <MDBBtn outline color="white">
+                    <MDBBtn color="white" onClick={this.linkedIn}>LinkedIn</MDBBtn>
+                    <MDBBtn outline color="white" onClick={this.gitHub}>
                       Github
                     </MDBBtn>
                   </MDBAnimation>
