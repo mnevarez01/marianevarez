@@ -41,15 +41,18 @@ const HomePage = () => {
       <h2 className='text'>Projects</h2>
       {info.map(({ title, img, description, link }) =>
         (
-          <MDBContainer className='mt-5'>
+          <MDBContainer className="mt-5">
             <MDBRow>
-              <MDBCol md='4'>
+              <MDBCol md='10'>
                 <MDBView hover>
-                  <img className="img-fluid" alt='' src={img} />
+                  <img
+                    src={img}
+                    className="img-fluid"
+                    alt=""
+                  />
                   <MDBMask className="flex-center" overlay="blue-strong">
-                    <p className='white-text'>{title}</p>
-                    <p className='white-text'>{description}</p>
-                    <a>{link}</a>
+                    <p className="white-text">{title}</p>
+                    <p className="white-text">{description}</p>
                   </MDBMask>
                 </MDBView>
               </MDBCol>
