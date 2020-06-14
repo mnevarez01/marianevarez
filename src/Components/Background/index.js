@@ -12,9 +12,7 @@ import {
 import "./style.css";
 
 class Background extends React.Component {
-  state = {
-    collapsed: false
-  };
+
   linkedIn = () => {
     window.open('https://www.linkedin.com/in/mnevarez05/')
   }
@@ -22,11 +20,6 @@ class Background extends React.Component {
     window.open('https://github.com/mnevarez01')
   }
 
-  handleTogglerClick = () => {
-    this.setState({
-      collapsed: !this.state.collapsed
-    });
-  };
 
   render() {
 
@@ -66,7 +59,7 @@ class Background extends React.Component {
                     <img
                       src="https://i.imgur.com/z3qqizQ.jpg"
                       alt=""
-                      className="img-fluid"
+                      className="img-fluid z-depth-4 rounded"
                     />
                   </MDBAnimation>
                 </MDBCol>

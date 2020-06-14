@@ -1,14 +1,20 @@
 
 .text{
-  color: #b3d9ff;
-  text-align: center;
+  color: #b3d9ff  !important;
   padding: 30px;
   margin-top: 50px;
+  font-size: 100px;
+  font-family: 'Poppins', sans-serif;
+ 
 }
 
 .titles{
   text-align: center;
+  font-family: 'Poppins', sans-serif;
 }
 .background  {
   background-image: url('../../assets/Background1.jpg');
+}
+p{
+  font-family: 'Poppins', sans-serif;
 }

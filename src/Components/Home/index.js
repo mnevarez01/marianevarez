@@ -39,22 +39,22 @@ const HomePage = () => {
   return (
     <div className='blue-gradient color-block-5 mb-3 mx-auto z-depth-1-half  background'>
       <br></br>
-      <h2 className='text'>Portfolio</h2>
+      <h2 className='text text-left font-weight-bold'>Portfolio</h2>
       {info.map(({ title, img, description, link }) =>
         (
           <MDBContainer className="mt-5">
             <MDBRow>
-              <MDBCol md='10'>
-                <h3 className='titles'>{title}</h3>
+              <MDBCol md='10' className="mb-3">
+                <h3 className='titles font-weight-bold text-monospace'>{title}</h3>
                 <MDBView hover>
                   <img
 
                     src={img}
-                    className="img-fluid z-depth-2"
+                    className="img-fluid z-depth-5 rounded img-thumbnail"
                     alt=""
                   />
                   <MDBMask onClick={() => { window.open(link) }} className="flex-center" overlay="indigo-strong">
-                    <p className="white-text">{description}</p>
+                    <p className="white-text text-center">{description}</p>
                   </MDBMask>
                 </MDBView>
               </MDBCol>
