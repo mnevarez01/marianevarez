@@ -11,6 +11,7 @@
 .titles{
   text-align: center;
   font-family: 'Poppins', sans-serif;
+  text-shadow: 2px 2px #7986cb;
 }
 .background  {
   background-image: url('../../assets/Background1.jpg');
