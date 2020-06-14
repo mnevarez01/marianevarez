@@ -1,30 +1,30 @@
-import React, { useState, useRef } from 'react';
+import React from 'react';
 
-// import { OverlayTrigger, Tooltip } from 'react-bootstrap';
+
 import { MDBMask, MDBView, MDBContainer, MDBRow, MDBCol } from 'mdbreact';
 import './style.css'
 
 
 const HomePage = () => {
-  const ref = useRef(null);
-
-
 
   const info = [
     {
       title: 'Denver Through the Decades',
       img: 'https://i.imgur.com/U2mi7Kf.png',
-      description: 'An application using ReactJs, Mongoose, Express to create a historical application for those in the Denver Area. You will be able to navigate and learn what happened through the decades. You can also log in and add content and update the content as you see fit.'
+      description: 'An application using ReactJs, Mongoose, Express to create a historical application for those in the Denver Area. You will be able to navigate and learn what happened through the decades. You can also log in and add content and update the content as you see fit.',
+      link: 'https://denverdecades.herokuapp.com/'
     },
     {
       title: 'Alewery',
       img: 'https://i.imgur.com/0hEZeSx.png',
-      description: 'A site that contains all beers from your local breweries! To all breweries have your beers accessible to all!'
+      description: 'A site that contains all beers from your local breweries! To all breweries have your beers accessible to all!',
+      link: 'https://mighty-depths-48025.herokuapp.com/'
     },
     {
       title: 'Quarintainment',
       img: 'https://i.imgur.com/1DhzhNx.png',
-      description: 'While facing hard times building a website that is interactive and distracting to the mind.'
+      description: 'While facing hard times building a website that is interactive and distracting to the mind.',
+      link: 'https://mnevarez01.github.io/tmtg/'
     },
     {
       title: 'README Generator',
@@ -39,7 +39,7 @@ const HomePage = () => {
   return (
     <div className='blue-gradient color-block-5 mb-3 mx-auto z-depth-1-half  background'>
       <br></br>
-      <h2 className='text text-left font-weight-bold'>Portfolio</h2>
+      <h2 className='text text-left font-weight-bold'>Portfolio:</h2>
       {info.map(({ title, img, description, link }) =>
         (
           <MDBContainer className="mt-5">

@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Document, Page } from 'react-pdf/dist/entry.webpack';
-import samplePDF from './Resume.pdf';
+import resume from '../../assets/resume.pdf'
 import { pdfjs } from 'react-pdf';
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
-
-export default function Resume() {
+const Resume = () => {
   const [numPages, setNumPages] = useState(null);
 
   function onDocumentLoadSuccess({ numPages }) {
@@ -14,7 +13,7 @@ export default function Resume() {
 
   return (
     <Document
-      file={samplePDF}
+      file={resume}
       onLoadSuccess={onDocumentLoadSuccess}
     >
       {Array.from(
@@ -27,5 +26,8 @@ export default function Resume() {
         ),
       )}
     </Document>
-  );
+
+  )
 }
+
+export default Resume;
