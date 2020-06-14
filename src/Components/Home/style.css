@@ -1,6 +1,6 @@
 
 .text{
-  color: #b3d9ff  !important;
+  color: #e1f5fe  !important;
   padding: 30px;
   margin-top: 50px;
   font-size: 100px;
@@ -12,6 +12,7 @@
   text-align: center;
   font-family: 'Poppins', sans-serif;
   text-shadow: 2px 2px #7986cb;
+  font-size: 40px;
 }
 .background  {
   background-image: url('../../assets/Background1.jpg');

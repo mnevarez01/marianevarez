@@ -42,15 +42,15 @@ const HomePage = () => {
       <h2 className='text text-left font-weight-bold'>Portfolio:</h2>
       {info.map(({ title, img, description, link }) =>
         (
-          <MDBContainer className="mt-5">
+          <MDBContainer key={title} className="mt-5">
             <MDBRow>
               <MDBCol md='10' className="mb-3">
-                <h3 className='titles font-weight-bold text-monospace'>{title}</h3>
+                <h3 className='titles font-weight-bold text-white text-monospace'>{title}</h3>
                 <MDBView hover>
                   <img
 
                     src={img}
-                    className="img-fluid z-depth-5 rounded img-thumbnail"
+                    className="img-fluid z-depth-5 rounded"
                     alt=""
                   />
                   <MDBMask onClick={() => { window.open(link) }} className="flex-center" overlay="indigo-strong">
