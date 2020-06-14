@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 // import Menu from './Components/Menu'
 import Home from './Components/Home'
-// import About from './Components/About'
+import Nav from './Components/Nav'
 import Background from './Components/Background'
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
@@ -18,6 +18,7 @@ const App = () => {
       {/* <Menu />
       <About />
       <Home /> */}
+      <Nav />
       <Background />
       <Home />
     </div>

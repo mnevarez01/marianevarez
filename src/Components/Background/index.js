@@ -1,20 +1,12 @@
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+
 import {
-  MDBNavbar,
-  MDBNavbarBrand,
-  MDBNavbarNav,
-  MDBNavItem,
-  MDBNavLink,
-  MDBNavbarToggler,
-  MDBCollapse,
   MDBMask,
   MDBRow,
   MDBCol,
   MDBBtn,
   MDBView,
   MDBContainer,
-  MDBFormInline,
   MDBAnimation
 } from "mdbreact";
 import "./style.css";
@@ -37,49 +29,9 @@ class Background extends React.Component {
   };
 
   render() {
-    const overlay = (
-      <div
-        id="sidenav-overlay"
-        style={{ backgroundColor: "transparent" }}
-        onClick={this.handleTogglerClick}
-      />
-    );
 
     return (
       <div id="apppage">
-        <Router>
-          <div>
-            <MDBNavbar
-              color="rgba-blue-light"
-              dark
-              expand="md"
-              fixed="top"
-              scrolling
-              transparent
-            >
-              <MDBContainer>
-                <MDBNavbarBrand>
-                  <strong className="white-text">Maria Nevarez</strong>
-                </MDBNavbarBrand>
-                <MDBNavbarToggler onClick={this.handleTogglerClick} />
-                <MDBCollapse isOpen={this.state.collapsed} navbar>
-                  <MDBNavbarNav left>
-                    <MDBNavItem active>
-                      <MDBNavLink to="#!">Home</MDBNavLink>
-                    </MDBNavItem>
-                    <MDBNavItem>
-                      <MDBNavLink to="#!">Portfolio</MDBNavLink>
-                    </MDBNavItem>
-                    <MDBNavItem>
-                      <MDBNavLink to="#!">Resume</MDBNavLink>
-                    </MDBNavItem>
-                  </MDBNavbarNav>
-                </MDBCollapse>
-              </MDBContainer>
-            </MDBNavbar>
-            {this.state.collapsed && overlay}
-          </div>
-        </Router>
         <MDBView>
           <MDBMask className="d-flex justify-content-center align-items-center gradient">
             <MDBContainer>

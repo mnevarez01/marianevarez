@@ -9,3 +9,6 @@
 .titles{
   text-align: center;
 }
+.background  {
+  background-image: url('../../assets/Background1.jpg');
+}

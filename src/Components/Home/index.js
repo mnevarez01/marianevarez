@@ -37,7 +37,7 @@ const HomePage = () => {
 
 
   return (
-    <div className='blue-gradient color-block-5 mb-3 mx-auto z-depth-1-half '>
+    <div className='blue-gradient color-block-5 mb-3 mx-auto z-depth-1-half  background'>
       <br></br>
       <h2 className='text'>Portfolio</h2>
       {info.map(({ title, img, description, link }) =>
@@ -50,7 +50,7 @@ const HomePage = () => {
                   <img
 
                     src={img}
-                    className="img-fluid"
+                    className="img-fluid z-depth-2"
                     alt=""
                   />
                   <MDBMask onClick={() => { window.open(link) }} className="flex-center" overlay="indigo-strong">
