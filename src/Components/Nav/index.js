@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom'
+import { BrowserRouter as Router, useHistory as history } from 'react-router-dom'
 import Background from '../Background'
 import Resume from '../Resume'
 import Home from '../Home'
@@ -17,6 +17,7 @@ import {
 
 
 class Nav extends React.Component {
+  // history = useHistory();
   state = {
     collapsed: false
   };
@@ -27,6 +28,10 @@ class Nav extends React.Component {
     });
   };
 
+  handleHome = () => {
+
+    history.pushState("/Home")
+  }
 
   render() {
     // const location = useLocation();
@@ -56,16 +61,16 @@ class Nav extends React.Component {
             <MDBCollapse isOpen={this.state.collapsed} navbar>
               <MDBNavbarNav left>
                 <MDBNavItem >
-                  <MDBNavLink to="/#home" onClick={() => (<Background />)}>Home
+                  <MDBNavLink to="/home" onClick={this.handleHome}>Home
                   </MDBNavLink>
                 </MDBNavItem>
                 <MDBNavItem>
-                  <MDBNavLink to="/#portfolio" onClick={() => <Home />}>Portfolio
+                  <MDBNavLink to="/portfolio">Portfolio
                   {/* <Home /> */}
                   </MDBNavLink>
                 </MDBNavItem>
                 <MDBNavItem>
-                  <MDBNavLink to="/#Resume" onClick={() => <Resume />}>Resume
+                  <MDBNavLink to="/Resume" >Resume
                   {/* <Resume/> */}
                   </MDBNavLink>
                 </MDBNavItem>
