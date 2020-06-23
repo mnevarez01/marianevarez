@@ -28,11 +28,6 @@ class Nav extends React.Component {
     });
   };
 
-  handleHome = () => {
-
-    history.pushState("/Home")
-  }
-
   render() {
     // const location = useLocation();
     const overlay = (
@@ -44,7 +39,7 @@ class Nav extends React.Component {
     );
 
     return (
-      <Router>
+      <div>
         <MDBNavbar
           color="blue accent-4"
           dark
@@ -61,17 +56,17 @@ class Nav extends React.Component {
             <MDBCollapse isOpen={this.state.collapsed} navbar>
               <MDBNavbarNav left>
                 <MDBNavItem >
-                  <MDBNavLink to="/home" onClick={this.handleHome}>Home
+                  <MDBNavLink to="/home">Home
                   </MDBNavLink>
                 </MDBNavItem>
                 <MDBNavItem>
                   <MDBNavLink to="/portfolio">Portfolio
-                  {/* <Home /> */}
+              
                   </MDBNavLink>
                 </MDBNavItem>
                 <MDBNavItem>
                   <MDBNavLink to="/Resume" >Resume
-                  {/* <Resume/> */}
+               
                   </MDBNavLink>
                 </MDBNavItem>
               </MDBNavbarNav>
@@ -79,7 +74,7 @@ class Nav extends React.Component {
           </MDBContainer>
         </MDBNavbar>
         {this.state.collapsed && overlay}
-      </Router>
+      </div>
 
     )
   }
