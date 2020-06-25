@@ -1,26 +1,35 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles';
-import { Breadcrumbs } from '@material-ui/core'
+import { Breadcrumbs, Typography } from '@material-ui/core'
+import { spacing } from '@material-ui/system';
 import Home from '../Home'
 import Background from '../Background'
 import Resume from '../Resume'
 // import './style.css'
 
 const useStyles = makeStyles((theme) => ({
+
   text: {
-    flexGrow: 1,
-    color: "#000000",
-    backgroundColor: "#599ba3",
-    height: 80,
-    paddingTop: 10,
-    paddingBottom: 10,
-    marginTop: -8,
-    marginRight: -16,
-    marginLeft: -16,
-    marginBottom: -8,
-    position: "fixed",
+    backgroundColor: "#50b6bb",
+    height: 60,
+    paddingTop: 5,
+    paddingBottom: 5,
+    position: 'relative',
     top: 0,
+
+  },
+  title: {
+    flexGrow: 1,
+    textAlign: "center",
+    color: "#ffffff",
+    fontSize: 40,
+    fontFamily: "Codystar",
+
+
+    [theme.breakpoints.down('sm')]: {
+      display: "none"
+    }
 
   }
 }));
@@ -43,19 +52,22 @@ const Nav = () => {
 
 
   return (
-    <div className='bar'>
-      <Breadcrumbs className={classes.text} aria-label="breadcrumb">
-        <Link to="/" onClick={renderHome}>
+    <div >
+      <Breadcrumbs mx="auto" className={classes.text} >
+        <Link to="/" color='primary' onClick={renderHome}>
           Home
   </Link>
-        <Link color="inherit" to="/portfolio" onClick={renderBackground}>
+        <Link color='primary' to="/portfolio" onClick={renderBackground}>
           Portfolio
   </Link>
-        <Link color="inherit" to="/resume" onClick={renderResume}>
+        <Link color="primary" to="/resume" onClick={renderResume}>
           Resume
   </Link>
+        <Typography variant="h4" className={classes.title}>
+          Maria Nevarez
+          </Typography>
       </Breadcrumbs>
-    </div>
+    </div >
 
   )
 
