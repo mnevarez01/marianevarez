@@ -9,14 +9,23 @@ import Resume from './Components/Resume'
 
 const App = () => {
   document.title = "Maria Nevarez"
-
-
   return (
-    <>
+    <Router>
       <Nav />
-      <Background />
+      <Switch>
+        <Route exact path='/portfolio'>
+          <Home />
+        </Route>
+        <Route exact path='/resume'>
+          <Resume />
+        </Route>
+        <Route path='/'>
+          <Background />
+        </Route>
+      </Switch>
       <Home />
-    </>
+    </Router>
+
 
 
   );
